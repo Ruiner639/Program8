@@ -41,6 +41,10 @@ namespace Program_2_
             {
                 Console.WriteLine(hour_string + "it is a lovely " + day.DayOfWeek + " today. Weekends is coming in " + (6 - today) + " days");
             }
+            else
+            {
+                Console.WriteLine(hour_string + "it is a lovely " + day.DayOfWeek + " today. Weekends is here!");
+            }
             }
         }
     }
