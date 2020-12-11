@@ -6,17 +6,17 @@ namespace Program_2_
     {
         static void Main(string[] args)
         {
-           
+
             var hour = DateTime.Now.Hour;//I entered hours to determine the time of day
-            string hour_string = "eror";//To display one of the lines
+            string hour_string = "Good night, ";//To display time values from 0 to 3 am.
             var day = DateTime.Now;//date at the moment
             var monday = "07.12.2020";//day from which the week is counted by day
             var day_m = DateTime.Parse(monday);//convert string to date value
-            int today;//entered a value to which the number of the day of the week will be assigned
+            int today = 0;//entered a value to which the number of the day of the week will be assigned
             int i = 1;//the days of the week started from one
             while (today != i)//cycle defining the number of the day of the week
             {
-              if (day.DayOfWeek == day_m.DayOfWeek)//I don’t know how to bring the time into a string, so I decided to go from the opposite and use the selection method to calculate the day
+                if (day.DayOfWeek == day_m.DayOfWeek)//I don’t know how to bring the time into a string, so I decided to go from the opposite and use the selection method to calculate the day
                 {
                     today = i;
                 }
@@ -25,7 +25,8 @@ namespace Program_2_
                     day_m = day_m.AddDays(1);//I am adding 1 day so that the loop finds the correct today's date number
                     i++;
                 }
-            } if((hour >= 4) && (hour <= 11))//simple condition for finding the time of day
+            }
+            if ((hour >= 4) && (hour <= 11))//simple condition for finding the time of day
             {
                 hour_string = "Good morning, ";
             }
@@ -45,7 +46,6 @@ namespace Program_2_
             {
                 Console.WriteLine(hour_string + "it is a lovely " + day.DayOfWeek + " today. Weekends is here!");
             }
-            }
         }
     }
-
+}
