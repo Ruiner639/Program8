@@ -12,7 +12,7 @@ namespace Program_2_
             var day = DateTime.Now;//date at the moment
             var monday = "07.12.2020";//day from which the week is counted by day
             var day_m = DateTime.Parse(monday);//convert string to date value
-            int today;//entered a value to which the number of the day of the week will be assigned
+            int today = 10;//entered a value to which the number of the day of the week will be assigned
             int i = 1;//the days of the week started from one
             while (today != i)//cycle defining the number of the day of the week
             {
